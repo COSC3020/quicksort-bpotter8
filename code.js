@@ -26,17 +26,15 @@ function quicksort(array) {
 
 function partition(array, front, back) {
     let pivot = array[back];
-    let i = front - 1;
+    let i = front;
 
     for (let j = front; j < back; j++) {
         if (array[j] < pivot) {
-            i++;
             [array[i], array[j]] = [array[j], array[i]];
+            i++;
         }
     }
 
-    [array[i + 1], array[back]] = [array[back], array[i + 1]];
-    let pivInd = i + 1;
-    
-    return pivInd;
+    [array[i], array[back]] = [array[back], array[i]];
+    return i;
 }
