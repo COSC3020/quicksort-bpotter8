@@ -1,4 +1,8 @@
 function quicksort(array) {
+    if (array.length === 0){
+        return array;
+    }
+    
     let stack = [];
     let length = array.length;
     
