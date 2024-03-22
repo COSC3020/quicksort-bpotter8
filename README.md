@@ -14,3 +14,7 @@ recursive call considers.
 Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
+
+Answer:
+
+In the worst case, the chosen pivot is either the smallest or largest element in the array. Because there are n elements in the array, the runtime for the 'partition' function is $\Theta(n)$. In the worst case in the 'quicksort' function itself, the stack could grow to n elements if the each element of the array would need to be partitioned seperately. This would result in a runtime of $\Theta(n)$. With these functions together, the worst case runtime would be $\Theta(n^2)$.
